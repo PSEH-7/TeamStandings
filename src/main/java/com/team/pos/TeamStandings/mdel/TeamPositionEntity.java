@@ -1,6 +1,9 @@
 package com.team.pos.TeamStandings.mdel;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +15,8 @@ public class TeamPositionEntity {
 	private Integer leagueId;
 	private Integer countryId;
 	private Integer position;
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Integer getId() {
 		return id;
 	}
